@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.basepom</groupId>
+        <artifactId>basepom-oss</artifactId>
+        <version>50</version>
+        <relativePath />
+    </parent>
+
+    <groupId>invoker-bug</groupId>
+    <artifactId>bom</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <basepom.check.skip-all>true</basepom.check.skip-all>
+        <the.version>0.1-SNAPSHOT</the.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>invoker-bug</groupId>
+                <artifactId>dep</artifactId>
+                <version>${the.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>invoker-bug</groupId>
+                <artifactId>dep</artifactId>
+                <version>${the.version}</version>
+                <classifier>tests</classifier>
+            </dependency>
+
+            <dependency>
+                <groupId>invoker-bug</groupId>
+                <artifactId>test</artifactId>
+                <version>${the.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
